@@ -4,12 +4,9 @@ import os
 
 CSI = "\x1b["
 BEGIN = f"{CSI}5;10H"      # курсор в строку 5, столбец 10
-CLEAR = f"{CSI}2J"   
-
-
+  
 def clear_screen():
     os.system("clear")
-
 
 def multiple_progressbar(num_tasks):
     bar_width = 25
@@ -22,8 +19,6 @@ def multiple_progressbar(num_tasks):
                   end='', flush=True)
             time.sleep(0.05)
     print(f"{CSI}8;1HDone")
-
-
 multiple_progressbar(4)
     
 
