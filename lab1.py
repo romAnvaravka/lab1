@@ -8,7 +8,6 @@ CLEAR = f"{CSI}2J"
 
 
 def clear_screen():
-    
     os.system("clear")
 
 
@@ -16,7 +15,6 @@ def multiple_progressbar(num_tasks):
     bar_width = 25
     for task in range(1, num_tasks + 1):
         clear_screen()
-        print(CLEAR, end='')
         for progress in range(1, bar_width + 1):
             bar = '#' * progress + '_' * (bar_width - progress)
             percent = progress * 100 // bar_width
